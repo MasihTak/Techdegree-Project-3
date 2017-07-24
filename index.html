@@ -14,9 +14,10 @@
       </div>
     </header>
     <div class="container">
+      <h2>Signup for our newsletter</h2>
+      <p class="para">Get the latest news on how your code is doing right in your inbox</p>
+      <hr>
       <form class="form" action="index.html" method="post">
-        <h2>Signup for our newsletter</h2>
-        <p class="para">Get the latest news on how your code is doing right in your inbox</p>
         <fieldset>
           <legend>Contact Information</legend>
           <label class="media" for="name">Full Name</label>
@@ -29,9 +30,8 @@
           <input type="text" name="user_street" id="street">
           <label class="media" for="city">City</label>
           <input type="text" name="user_city" id="city">
-          <label class="media">State
-          <input list="state" name="user_state" placeholder="Choose State"></label>
-          <datalist id="state">
+          <label class="media" for="state">State</label>
+          <select id="state">
             <option value="AL">Alabama</option>
           	<option value="AK">Alaska</option>
           	<option value="AZ">Arizona</option>
@@ -83,10 +83,11 @@
           	<option value="WV">West Virginia</option>
           	<option value="WI">Wisconsin</option>
           	<option value="WY">Wyoming</option>
-          </datalist>
-          <label class="media" for="zip">Zip Code</label><br>
-          <input required type="text"  pattern="[0-9]{5}" name="user_zip" id="zip" placeholder="5 digit zip"><br>
+          </select>
+          <label class="media" for="zip">Zip Code</label>
+          <input required type="text"  pattern="[0-9]{5}" name="user_zip" id="zip" placeholder="5 digit zip">
         </fieldset>
+        <hr>
         <fieldset>
           <legend>Newsletter</legend>
           <p>Select the newsletters you would like to recieve</p>
@@ -95,7 +96,7 @@
           <input type="checkbox" name="user_newsletters" value="Javascript_NEWS" id="Javascript"><label for="Javascript">Javascript News</label><br>
           <p>Newsletter format</p>
           <input type="radio" name="newsletter_format" value="HTML_format" id="HTMLformat"><label for="HTMLformat">HTML</label><br>
-          <input type="radio" name="newsletter_format1" value="plaintext_format" id="plaintext"><label for="plaintext">Plain text</label><br>
+          <input type="radio" name="newsletter_format" value="plaintext_format" id="plaintext"><label for="plaintext">Plain text</label><br>
         </fieldset>
         <p>Other topics you'd like to hear about</p>
         <textarea name="user_topics" id="others" placeholder="Write here!"></textarea><br>
