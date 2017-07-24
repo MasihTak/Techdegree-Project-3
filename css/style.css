@@ -10,7 +10,9 @@ GENERAL
   clear: both;
 }
 
-
+hr {
+  border: solid 1px black
+}
 /*****************************************************
 HEADER
 ****************************************************/
@@ -37,8 +39,8 @@ body {
   background-color: #fff;
   line-height: 1.8em;
   margin: 0;
-  text-align: left;
 }
+
 .container {
   width: 100%;
   max-width: 1150px;
@@ -49,11 +51,9 @@ body {
 
 fieldset {
   border: 0;
-  border-top: 2px solid #000;
 }
 
 legend {
-  float: left;
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 20px;
@@ -61,7 +61,7 @@ legend {
 }
 
 label {
-	float: left;
+	display: block;
 	margin-right: 20px;
 }
 
@@ -81,21 +81,20 @@ input[type=checkbox], input[type=radio] {
   top: 5px;
 }
 
-input[type=text], input[type=email], input[type=number], input[list=state], textarea {
+input[type=text], input[type=email], input[type=number], input[list=state], textarea, select, #zip {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 6px;
     margin-bottom: 16px;
-    clear: both;
     resize: vertical;
 }
+
 #zip {
   margin-top: 15px;
   text-indent: 10px;
   width: 50%;
-  float: left;
 }
 
 p {
@@ -151,34 +150,33 @@ MEDIA QUERIES
     max-width: 900px;
     margin:0 auto;
   }
+
   .media {
-    display: block;
-		clear: both;
-    float: left;
+    display: inline-block;
+    width:25%;
+    margin-top:10px;
 	}
+
   input[type="text"],
 	input[type="email"],
 	input[type="number"],
-  input[list=state] {
-    clear: both;
-     float: right;
+  input[list=state],
+  select {
 	   width: 70%;
 	}
+
   input[type=checkbox],
   input[type=radio] {
     float: left;
     margin-right: 20px;
   }
+
   #zip {
 	width: 25%;
-	float: right;
-  margin: 0;
 	}
+
   .para {
     text-align: center;
-  }
-  input[list=state] {
-
   }
 
 }
